@@ -770,4 +770,33 @@ h1.galeria {
   border-top: 1px solid #ecf0f1;
   font-size: 13px;
  }
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+  footer {
+    grid-template-columns: 1fr; /* Cambia a una columna en pantallas pequeñas */
+    padding: 20px;
+  }
+
+  .footer-section {
+    margin-bottom: 20px; /* Aumenta el margen entre secciones */
+  }
+
+  .footer-section h4 {
+    font-size: 20px; /* Tamaño de texto más pequeño */
+  }
+
+  .footer-section p,
+  .footer-section a {
+    font-size: 16px; /* Texto más pequeño en pantallas móviles */
+  }
+
+  .social-links a {
+    font-size: 18px; /* Ajuste del tamaño de los íconos */
+  }
+
+  .footer-bottom {
+    font-size: 12px; /* Texto más pequeño en la parte inferior */
+  }
+}
  
