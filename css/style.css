@@ -449,25 +449,56 @@ td a:hover {
   text-decoration: underline;
 }
 
+/* Media Queries para Responsividad */
 @media screen and (max-width: 768px) {
   table {
-    width: 100%;
+    width: 100%; /* Asegúrate de que la tabla ocupe el 100% del ancho */
+    display: block; /* Mostrar como bloque */
+    overflow-x: auto; /* Habilitar desplazamiento horizontal */
+    white-space: nowrap; /* Evitar el ajuste de texto */
   }
 
-  th,
+  thead {
+    display: none; /* Ocultar encabezados en móviles */
+  }
+
+  tr {
+    display: flex; /* Cambiar a flex */
+    flex-direction: column; /* Colocar columnas en fila */
+    margin-bottom: 10px; /* Espaciado entre filas */
+    border: 1px solid #ddd; /* Bordes */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #fff; /* Fondo blanco */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+
   td {
-    font-size: 14px;
+    text-align: left; /* Alinear texto a la izquierda */
+    padding: 8px; /* Ajustar espaciado */
+    border-bottom: none; /* Sin bordes inferiores */
+    border-top: 1px solid #ddd; /* Bordes superiores */
+    position: relative; /* Necesario para pseudo-elemento */
+  }
+
+  td::before {
+    content: attr(data-label); /* Mostrar etiquetas */
+    font-weight: bold; /* Negrita para etiquetas */
+    display: inline-block; /* Mostrar como bloque en línea */
+    margin-right: 10px; /* Margen a la derecha */
+    color: #000; /* Color del texto */
   }
 }
- 
- .form {
+
+/* Estilos para el formulario */
+.form {
   text-align: center;
   margin-top: 25px;
   margin-bottom: 25px;
   color: #000000;
   font-weight: bold;
- }
- .form-container {
+}
+
+.form-container {
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
@@ -476,28 +507,32 @@ td a:hover {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 40px;
- }
- label {
+}
+
+label {
   font-weight: bold;
   display: block;
   margin-top: 15px;
   color: #2d8ece;
- }
- input[type="text"],
- input[type="email"],
- textarea,
- select {
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 4px;
- }
- textarea {
+}
+
+textarea {
   height: 100px;
   resize: vertical;
- }
- input[type="submit"] {
+}
+
+input[type="submit"] {
   background-color: #282bce9c;
   color: white;
   padding: 10px 20px;
@@ -505,12 +540,12 @@ td a:hover {
   border-radius: 4px;
   cursor: pointer;
   margin-top: 15px;
- }
- 
- input[type="submit"]:hover {
+}
+
+input[type="submit"]:hover {
   background-color: #117dc0c2;
- }
- 
+}
+
  .aa {
   text-align: center;
   color: #000000;
