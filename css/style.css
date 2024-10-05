@@ -3,7 +3,8 @@ body {
   color: #000000;
   background-color: #ffffff;
   height: 100vh;
- }
+ }4
+
  
  .layout_padding {
   padding: 75px 0;
@@ -269,27 +270,29 @@ body {
   align-items: center;
   margin-bottom: 60px;
   object-fit: cover;
- }
- 
- .descubre-col .row {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
- }
- 
- .descubre-col .img-box img {
-  width: 100%;
- }
- 
- .descubre-col .detail-box {
-  margin-left: 65px;
- }
- 
- .descubre-col .detail-box p {
+}
+
+.descubre-col .row {
+  display: flex;
+  flex-direction: column; /* Cambiado a columna para móviles */
+  align-items: center; /* Centrar los elementos */
+}
+
+.descubre-col .img-box img {
+  width: 100%; /* Mantener imagen responsiva */
+}
+
+.descubre-col .detail-box {
+  margin-left: 0; /* Quitar margen izquierdo para móviles */
+  text-align: center; /* Centrar texto en móviles */
+  margin-top: 15px; /* Añadir margen superior */
+}
+
+.descubre-col .detail-box p {
   margin-top: 10px;
- }
- 
- .descubre-col .detail-box a {
+}
+
+.descubre-col .detail-box a {
   display: inline-block;
   padding: 8px 30px;
   background-color: #353434;
@@ -297,7 +300,29 @@ body {
   color: #ffffff;
   border-radius: 20px 20px 0 20px;
   margin-top: 35px;
- }
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+  .video {
+    margin-bottom: 30px; /* Reducir el margen inferior en móviles */
+  }
+
+  .descubre-col .row {
+    flex-direction: column; /* Cambiar dirección a columna */
+    align-items: center; /* Alinear elementos al centro */
+  }
+
+  .descubre-col .detail-box {
+    margin-left: 0; /* Eliminar margen izquierdo */
+    text-align: center; /* Centrar el texto */
+  }
+
+  .descubre-col .detail-box a {
+    padding: 10px 20px; /* Ajustar el padding para móviles */
+    margin-top: 20px; /* Reducir margen superior */
+  }
+}
  
  .dest {
   text-align: center;
