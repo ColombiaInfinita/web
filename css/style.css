@@ -231,6 +231,10 @@ body {
  .slider_section .detail-box p {
   margin-top: 25px;
  }
+
+ .texto {
+  text-align: justify;
+ }
  
  .slider_section .detail-box a {
   display: inline-block;
@@ -299,9 +303,6 @@ body {
   margin-top: 35px;
  }
  
-.texto {
-  text-align: justify;
- }
 
 .dest {
   text-align: center;
@@ -804,4 +805,19 @@ h1.galeria {
       font-size: 12px; /* Texto más pequeño en la parte inferior */
     }
   }
-   
+
+/* Apartado de la prueba */
+  .once {
+  color: #000000;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: center;
+   }
+
+   .barcelona{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
